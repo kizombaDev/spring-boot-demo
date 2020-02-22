@@ -7,6 +7,7 @@ info:
   contact:
     email: mailtoharshgupta@gmail.com
 basePath: /demo-service/v1
+host: localhost
 schemes:
   - http
 
@@ -42,8 +43,42 @@ paths:
             example: pong
         500:
           $ref: '#/responses/500InternalServerError'
+  /user/{id}:
+    get:
+      operationId: userGetById
+      summary: Returns the user
+      description: |-
+        Returns paginated list of stocks.
+      parameters:
+        - name: id
+          in: path
+          description: User ID
+          required: true
+          type: integer
+      responses:
+        200:
+          description: Successfull response with user content.
+          schema:
+            $ref: '#/definitions/User'
+        500:
+          $ref: '#/responses/500InternalServerError'
 
 definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+        minLength: 3
+        maxLength: 50
+      active:
+        type: boolean
+    required:
+      - id
+      - name
+      - active
   ErrorResponse:
     description: |-
       Describes common fields for error responses. There could be some extra fields.

@@ -1,4 +1,4 @@
-package org.kizombadev.spring.demo.properties;
+package org.kizombadev.spring.demo.configuration;
 
 import lombok.Getter;
 import lombok.Setter;

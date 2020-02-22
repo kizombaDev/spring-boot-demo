@@ -1,7 +1,7 @@
 package org.kizombadev.spring.demo.service;
 
 import lombok.AllArgsConstructor;
-import org.kizombadev.spring.demo.properties.DemoProperties;
+import org.kizombadev.spring.demo.configuration.DemoProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 
