@@ -14,6 +14,9 @@ spring:
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
 
+#kafka:
+#  bootstrapAddress: localhost:9092
+
 management:
   endpoints:
     web:
