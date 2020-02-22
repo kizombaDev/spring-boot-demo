@@ -1,6 +1,11 @@
 demo:
   url-get: https://httpbin.org/get
 
+info:
+  developer:
+    name: Marcel Swoboda
+    email: marcel.swoboda@gmx.de
+
 spring:
   datasource:
     url: jdbc:h2:file:E:\coding\spring-learning\demo\.h2\db
@@ -13,6 +18,10 @@ spring:
       ddl-auto: validate
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
+  security:
+    user:
+      name: user
+      password: password
 
 #kafka:
 #  bootstrapAddress: localhost:9092
@@ -24,4 +33,4 @@ management:
         include: "*"
   endpoint:
     health:
-      show-details: always
+      show-details: when_authorized
