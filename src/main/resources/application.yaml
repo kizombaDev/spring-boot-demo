@@ -3,7 +3,7 @@ demo:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:file:E:\coding\spring-learning\demo\.h2\db
     driverClassName: org.h2.Driver
     username: sa
     password:
