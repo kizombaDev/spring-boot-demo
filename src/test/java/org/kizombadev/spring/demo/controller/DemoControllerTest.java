@@ -27,7 +27,7 @@ public class DemoControllerTest {
 
         when(demoRestClientService.getDemo()).thenReturn(foo);
 
-        this.mvc.perform(get("/context/demo"))
+        this.mvc.perform(get("/demo-service/v1/demo"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(foo));
     }
