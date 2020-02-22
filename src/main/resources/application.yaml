@@ -1,0 +1,11 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+demo:
+  url-get: https://httpbin.org/get
+  url-post: https://httpbin.org/post
